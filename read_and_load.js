@@ -7,13 +7,13 @@ const { parse } = require("csv-parse");
 function read_and_load(filename, db) {
   var table_name = ''
   if (filename.includes('students')) {
-    table_name = 'students_test (pid, fname, lname)';
+    table_name = 'students (pid, fname, lname)';
   }
   else if (filename.includes('courses')) {
-    table_name = 'courses_test (cid, name, number, department, exam1, exam2, exam3)';
+    table_name = 'courses (cid, name, number, department, exam1, exam2, exam3)';
   }
   else {
-    table_name = 'enrolled_test (pid, cid)';
+    table_name = 'enrolled (pid, cid)';
   }
 
   fs.createReadStream("./csv_data/" + filename)
@@ -47,10 +47,11 @@ let db = new sqlite3.Database('data.db', (err) => {
   console.log('Connected to the in-memory SQlite database.');
 });
 
-async function x() {
+function x() {
   read_and_load('students.csv', db);
   read_and_load('courses.csv', db);
   read_and_load('enrolled.csv', db);
-  return true;
 }
+
+x()
 
