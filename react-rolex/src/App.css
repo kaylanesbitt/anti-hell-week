@@ -4,3 +4,61 @@
   padding: 2rem;
   text-align: center;
 }
+
+.css-hlj6pa-MuiDialogActions-root {
+  display: none !important;
+}
+
+.css-1hbyad5-MuiTypography-root {
+  display: none !important
+}
+
+.css-j88s13-MuiPickersToolbar-root-MuiDatePickerToolbar-root {
+  display: none !important
+}
+
+.css-j88s13-MuiPickersToolbar-root-MuiDatePickerToolbar-root {
+  padding: 0 !important;
+}
+
+.css-3jvy96-MuiTypography-root-MuiDatePickerToolbar-title {
+  justify-content: center !important;
+  background-color: orange;
+  padding: 1rem;
+}
+
+.css-1hbyad5-MuiTypography-root {
+  display: none !important;
+}
+
+.css-7oawqu-MuiButtonBase-root-MuiPickersDay-root:not(.Mui-selected) {
+  border-color: transparent !important;
+}
+
+.css-7oawqu-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+  background-color: orange !important;
+}
+
+.css-1qs309j-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+  background-color: orange !important;
+}
+
+.header-text {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: orange;
+}
+
+.css-jhsfre-MuiGrid-root-MuiPickersToolbar-content {
+  justify-content: center !important;
+}
+
+.css-1eurbeq-MuiPickersToolbar-root-MuiDatePickerToolbar-root {
+  background-color: orange;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
