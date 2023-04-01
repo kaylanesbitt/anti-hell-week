@@ -11,6 +11,12 @@ const { parse } = require("csv-parse");
     console.log('Connected to the in-memory SQlite database.');
   });
 
+   db.all('select * from students_test', function(err, rows) {
+    rows.forEach(function(row) { 
+        console.log(row)
+    })
+   });
+
   
   
   
@@ -21,16 +27,17 @@ const { parse } = require("csv-parse");
     .pipe(parse({ delimiter: ",", from_line: 2 }))
     .on("data", function (row) {
          // for each row in csv file, make an insert statement.
-        let values = row.map((value) => '(?)').join(',');
-        let sql = 'INSERT INTO students_test VALUES ' + values;
-  
+        let values = row.map((value) => '?').join(',');
+        let sql = 'INSERT INTO students_test(pid, fname, lname) VALUES(' + values + ');';
+        console.log(sql)
+
         // insert into table using db connection
-        db.run(sql, row, function(err) {
+        /db.run(sql, row, function(err) {
             if (err) {
             return console.error(err.message);
             }
-    console.log(`Rows inserted ${this.changes}`);
-  });
+    console.log(`Rows inserted ${this.lastID}`);
+  }); 
     })
     .on("error", function (error) {
         console.log(error.message);
@@ -38,12 +45,6 @@ const { parse } = require("csv-parse");
     .on("end", function () {
         console.log("Done");
     });
-  
 
-  //close connection to database
-  db.close((err) => {
-    if (err) {
-      return console.error(err.message);
-    }
-    console.log('Close the database connection.');
-  });
+
+db.close();
