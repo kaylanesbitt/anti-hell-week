@@ -14,8 +14,8 @@ courses(
     exam2 TEXT, 
     exam3 TEXT);
 enrolled(
-    sid integer, 
+    pid integer, 
     cid integer, 
-    foreign key(sid) references students on delete cascade, 
+    foreign key(pid) references students on delete cascade, 
     foreign key(cid) references courses on delete cascade, 
-    unique (sid, cid));
+    unique (pid, cid));
