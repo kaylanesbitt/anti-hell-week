@@ -11,18 +11,8 @@ const { parse } = require("csv-parse");
     console.log('Connected to the in-memory SQlite database.');
   });
 
-   db.all('select * from students_test', function(err, rows) {
-    rows.forEach(function(row) { 
-        console.log(row)
-    })
-   });
-
-  
-  
-  
 
   //create read stream for students CSV file 
-
   fs.createReadStream("./csv_data/students.csv")
     .pipe(parse({ delimiter: ",", from_line: 2 }))
     .on("data", function (row) {
@@ -32,12 +22,12 @@ const { parse } = require("csv-parse");
         console.log(sql)
 
         // insert into table using db connection
-        /db.run(sql, row, function(err) {
+       /*  db.run(sql, row, function(err) {
             if (err) {
             return console.error(err.message);
             }
     console.log(`Rows inserted ${this.lastID}`);
-  }); 
+  });  */
     })
     .on("error", function (error) {
         console.log(error.message);
