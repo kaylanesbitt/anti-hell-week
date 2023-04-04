@@ -26,6 +26,13 @@ function get_common_courses(cid, db, callback) {
         )
         callback(results)
     }
+    ).close((error) => {
+        if (error) {
+            return console.log("Error closing database connection.")
+        }
+        console.log("Database connection successfully closed.")
+    }
+
     )
 
 }
