@@ -5,6 +5,8 @@ const { parse } = require("csv-parse");
 
 //create read stream for students CSV file 
 function read_and_load(filename, db) {
+
+  //for creating sql query 
   var table_name = ''
   if (filename.includes('students')) {
     table_name = 'students (pid, fname, lname)';
@@ -16,6 +18,7 @@ function read_and_load(filename, db) {
     table_name = 'enrolled (pid, cid)';
   }
 
+  //read csv file 
   fs.createReadStream("./csv_data/" + filename)
     .pipe(parse({ delimiter: ",", from_line: 2 }))
     .on("data", function (row) {
@@ -47,11 +50,12 @@ let db = new sqlite3.Database('data.db', (err) => {
   console.log('Connected to the in-memory SQlite database.');
 });
 
+
+// define function to run read_and_load into each table 
 function x() {
   read_and_load('students.csv', db);
   read_and_load('courses.csv', db);
   read_and_load('enrolled.csv', db);
 }
-
 x()
 
