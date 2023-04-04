@@ -15,16 +15,16 @@ students(\
 &nbsp;   lname TEXT); 
 
 courses(\
-&nbsp;    cid INTEGER PRIMARY KEY, \ 
-&nbsp;    name TEXT, \ 
-&nbsp;    number TEXT, \ 
-&nbsp;    department TEXT, \ 
+&nbsp;    cid INTEGER PRIMARY KEY, \
+&nbsp;    name TEXT, \
+&nbsp;    number TEXT, \
+&nbsp;    department TEXT, \
 &nbsp;    exam1 TEXT, \
 &nbsp;    exam2 TEXT, \
 &nbsp;    exam3 TEXT); \
 
 enrolled(\
-&nbsp;    pid integer, \ 
+&nbsp;    pid integer, \
 &nbsp;    cid integer, \
 &nbsp;    foreign key(pid) references students on delete cascade, \
 &nbsp;    foreign key(cid) references courses on delete cascade, \
