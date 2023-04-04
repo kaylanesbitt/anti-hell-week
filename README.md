@@ -12,7 +12,7 @@ This is the main part of the backend! It's just one function that runs one sql q
 students(\
 &nbsp;   pid INTEGER PRIMARY KEY, \
 &nbsp;   fname TEXT, \
-&nbsp;   lname TEXT); \
+&nbsp;   lname TEXT); 
 
 courses(\
 &nbsp;    cid INTEGER PRIMARY KEY, \ 
