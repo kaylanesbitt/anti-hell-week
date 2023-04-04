@@ -21,11 +21,11 @@ courses(\
 &nbsp;    department TEXT, \
 &nbsp;    exam1 TEXT, \
 &nbsp;    exam2 TEXT, \
-&nbsp;    exam3 TEXT); \
+&nbsp;    exam3 TEXT); 
 
 enrolled(\
 &nbsp;    pid integer, \
 &nbsp;    cid integer, \
 &nbsp;    foreign key(pid) references students on delete cascade, \
 &nbsp;    foreign key(cid) references courses on delete cascade, \
-&nbsp;    unique (pid, cid)); \
+&nbsp;    unique (pid, cid)); 
