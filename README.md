@@ -10,20 +10,22 @@ This is the main part of the backend! It's just one function that runs one sql q
 
 ### Database schemas:
 students(\
-    pid INTEGER PRIMARY KEY, \
-    fname TEXT, \
-    lname TEXT);\
+&nbsp;   pid INTEGER PRIMARY KEY, \
+&nbsp;   fname TEXT, \
+&nbsp;   lname TEXT);\
+
 courses(\
-    cid INTEGER PRIMARY KEY,\ 
-    name TEXT,\ 
-    number TEXT,\ 
-    department TEXT,\ 
-    exam1 TEXT, \
-    exam2 TEXT, \
-    exam3 TEXT);\
+&nbsp;    cid INTEGER PRIMARY KEY,\ 
+&nbsp;    name TEXT,\ 
+&nbsp;    number TEXT,\ 
+&nbsp;    department TEXT,\ 
+&nbsp;    exam1 TEXT, \
+&nbsp;    exam2 TEXT, \
+&nbsp;    exam3 TEXT);\
+
 enrolled(\
-    pid integer,\ 
-    cid integer, \
-    foreign key(pid) references students on delete cascade, \
-    foreign key(cid) references courses on delete cascade, \
-    unique (pid, cid));\
+&nbsp;    pid integer,\ 
+&nbsp;    cid integer, \
+&nbsp;    foreign key(pid) references students on delete cascade, \
+&nbsp;    foreign key(cid) references courses on delete cascade, \
+&nbsp;    unique (pid, cid));\
