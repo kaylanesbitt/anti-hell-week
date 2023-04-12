@@ -1,17 +1,19 @@
-import './App.css';
-import React from 'react'
-import Calendar from './components/Calendar';
-import Dates from './components/Dates';
+import React from 'react';
+import './index.css';
+import Home from './routes/Home';
+import ClassTwo from './routes/ClassTwo';
+import ClassThree from './routes/ClassThree';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className='header-text'>Calendar</h1>
-      <div className="container">
-        <Calendar className='calendar' />
-        <Dates className='deposits' />
-      </div>
-    </div>
+    <>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/classtwo' element={<ClassTwo />} />
+        <Route path='/classthree' element={<ClassThree />} />
+      </Routes>
+    </>
   );
 }
 
