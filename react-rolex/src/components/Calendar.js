@@ -8,33 +8,33 @@ import { PickersDay } from '@mui/x-date-pickers/PickersDay';
 import CheckIcon from '@mui/icons-material/Check';
 
 const Calendar = () => {
-    const [value, setValue] = React.useState(new Date());
-    const [highlightedDays, setHighlightedDays] = React.useState([1, 2, 3, 4, 5]);
-    console.log(highlightedDays);
+  const [value, setValue] = React.useState(new Date());
+  const [highlightedDays, setHighlightedDays] = React.useState([1, 2, 3, 4, 5]);
+  console.log(highlightedDays);
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <StaticDatePicker 
+      <StaticDatePicker
         orientation="portrait"
         openTo="day"
         value={value}
         onChange={(newValue) => {
-            setValue(newValue);
+          setValue(newValue);
         }}
         renderInput={(params) => <TextField {...params} />}
         renderDay={(day, _value, DayComponentProps) => {
-            const isSelected = !DayComponentProps.outsideCurrentMonth && highlightedDays.indexOf(day.getDate()) >= 0;
+          const isSelected = !DayComponentProps.outsideCurrentMonth && highlightedDays.indexOf(day.getDate()) >= 0;
 
-            return (
-                <Badge
-                    key={day.toString()}
-                    overlap="circular"
-                    badgeContent={isSelected ? <CheckIcon color='black' /> : undefined}>
-                    <PickersDay {...DayComponentProps} />
-                </Badge>
-            );
+          return (
+            <Badge
+              key={day.toString()}
+              overlap="circular"
+              badgeContent={isSelected ? <CheckIcon color='black' /> : undefined}>
+              <PickersDay {...DayComponentProps} />
+            </Badge>
+          );
         }}
-        />
+      />
     </LocalizationProvider>
   );
 };
