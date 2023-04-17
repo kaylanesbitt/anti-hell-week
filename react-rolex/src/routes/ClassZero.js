@@ -1,19 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 function ClassZero() {
-    const [message, setMessage] = useState("");
+    const url = 'http://localhost:8000/0'
+    const options = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+    const message = []
 
-    useEffect(() => {
-        fetch("http://localhost:8000/0")
-            .then((res) => res.json())
-            .then((data) => setMessage(data.message));
-    }, []);
+    fetch(url, options)
+        .then(response => response.json())
+        .then(json => message = json)
+        .catch(error => console.error(error))
+
+    const stuff = message.forEach((elt) => {
+        <div>
+            <h1>{elt}</h1>
+        </div>
+    })
 
     return (
         <div>
-            <h1>{message}</h1>
+            {stuff}
         </div>
-    );
+    )
 }
 
 export default ClassZero;

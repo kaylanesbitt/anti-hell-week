@@ -2,21 +2,23 @@ import React, { useState, useEffect } from 'react';
 import './index.css';
 import Home from './routes/Home';
 import ClassZero from './routes/ClassZero';
+import Message from './routes/Message';
 import ClassTwo from './routes/ClassTwo';
 import ClassThree from './routes/ClassThree';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
-
-  <div>
-    <Routes>
-      <Route path='/0' element={<ClassZero></ClassZero>}></Route>
-    </Routes>
-  </div>
-
+  return (
+    <div>
+      <Routes>
+        <Route path='/message' element={<Message />} />
+        <Route path='/0' element={<ClassZero />} />
+      </Routes>
+    </div>
+  )
 }
 
-export default App;
+export default App
 
 /*
 <>

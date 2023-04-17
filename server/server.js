@@ -38,8 +38,8 @@ app.get('/message/', (req, res) => {
     res.json({ message: "Hello from server!" });
 });
 
-app.get('/' + 0, (req, res) => {
-    get_common_courses(cid, db, function (callback) {
+app.get('/0', (req, res) => {
+    get_common_courses(0, db, function (callback) {
         res.json({ message: callback })
     })
 })
