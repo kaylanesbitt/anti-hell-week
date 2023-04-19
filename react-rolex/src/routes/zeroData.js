@@ -28,3 +28,5 @@ export const zeroData = [
         exam3: 'NULL'
     }
 ]
+
+export default zeroData;
