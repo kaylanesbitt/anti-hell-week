@@ -5,8 +5,8 @@
  * @param {*} callback returns a list of all tuples in form {cid: cid, count: num_students enrolled in cid}. ordered by greatest num students.
  */
 function get_common_courses(cid, db, callback) {
-    sql = 'with zero_pids as (select e.pid as pid from enrolled e where e.cid = ' + cid
-        + ') select e.cid, count(e.pid) as count, c.exam1, c.exam2, c.exam3 from enrolled e, courses c where c.cid = e.cid and e.pid = pid and e.cid != ' + cid
+    sql = 'with zero_pids as (select e.pid as pid from enrolled e, courses c where e.cid = ' + cid
+        + ') select e.cid, c.department, c.number, c.name, count(e.pid) as count, c.exam1, c.exam2, c.exam3 from enrolled e, courses c where c.cid = e.cid and e.pid = pid and e.cid != ' + cid
         + ' group by e.cid order by count(e.pid) desc'
     results = []
     db.all(sql, (error, rows) => {
@@ -43,7 +43,43 @@ app.get('/0', (req, res) => {
     get_common_courses(0, db, function (callback) {
         res.json({ message: callback })
     })
-})
+});
+
+app.get('/1', (req, res) => {
+    get_common_courses(1, db, function (callback) {
+        res.json({ message: callback })
+    })
+});
+
+app.get('/2', (req, res) => {
+    get_common_courses(2, db, function (callback) {
+        res.json({ message: callback })
+    })
+});
+
+app.get('/3', (req, res) => {
+    get_common_courses(3, db, function (callback) {
+        res.json({ message: callback })
+    })
+});
+
+app.get('/4', (req, res) => {
+    get_common_courses(4, db, function (callback) {
+        res.json({ message: callback })
+    })
+});
+
+app.get('/headmaster', (req, res) => {
+    get_common_courses(5, db, function (callback) {
+        res.json({ message: callback })
+    })
+});
+
+app.get('/incubator', (req, res) => {
+    get_common_courses(6, db, function (callback) {
+        res.json({ message: callback })
+    })
+});
 
 app.listen(8000, () => {
     console.log(`Server is running on port 8000.`);
