@@ -1,0 +1,49 @@
+const incubatorData = [
+    {
+        cid: 1,
+        name: 'COMP 211 Systems Fundamentals',
+        count: 21,
+        exam1: '2023-02-16',
+        exam2: '2023-03-28',
+        exam3: null
+    },
+    {
+        cid: 0,
+        name: 'COMP 301 Foundations of Programming',
+        count: 19,
+        exam1: '2023-02-14',
+        exam2: '2023-03-09',
+        exam3: '2023-03-28'
+    },
+    {
+        cid: 3,
+        name: 'COMP 283 Discrete Structures',
+        count: 9,
+        exam1: '2023-02-15',
+        exam2: '2023-03-15',
+        exam3: null
+    },
+    {
+        cid: 5,
+        name: 'COMP 210 Data Structures and Analysis',
+        count: 8,
+        exam1: '2023-02-15',
+        exam2: '2023-03-15',
+        exam3: null
+    },
+    {
+        cid: 2,
+        name: 'MATH 381 Discrete Math',
+        exam1: '2023-03-08',
+        exam2: null,
+        exam3: null
+    },
+    {
+        cid: 4,
+        name: 'RELI 125 Heaven and Hell',
+        exam1: '2023-03-07',
+        exam2: null,
+        exam3: null
+    }
+
+]

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import headmasterCourses from './connection.js'
+import zeroData from './zeroData.js'
 
 
 function ClassZero() {
@@ -13,7 +14,7 @@ function ClassZero() {
         })
     }, [])
 
-    const classes = classData.map((data, id) => {
+    const classes = zeroData.map((data, id) => {
         return <div key={id}>
             <h2>{data.department} {data.number}: {data.name}</h2>
             <p>Exam Dates:</p>

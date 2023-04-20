@@ -9,7 +9,6 @@ function headmasterCourses(tuples) {
         }).catch(err => console.log('error occured'))
 }
 
-headmasterCourses(tuples => console.log(tuples))
 
 function incubatorCourses(tuples) {
     const axios = require('axios')
@@ -19,6 +18,7 @@ function incubatorCourses(tuples) {
             tuples(response.data.message)
         }).catch(err => console.log('error occured'))
 }
+incubatorCourses(tuples => console.log(tuples))
 
 function prezCourses(tuples) {
     const axios = require('axios')
@@ -28,16 +28,29 @@ function prezCourses(tuples) {
             tuples(response.data.message)
         }).catch(err => console.log('error occured'))
 }
-
 function convertDate(date) {
+    const months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+    ]
     if (date.length === 13) {
         const year = parseInt(date[2] + date[3] + date[4] + date[5] + date[6])
         const month = parseInt(date[7] + date[8])
         const day = parseInt(date[10] + date[11])
-        return [year, month, day]
+        return `${months[month]} ${day}, ${year}`
     }
     else {
-        return 'null'
+        return 0
     }
 }
 
