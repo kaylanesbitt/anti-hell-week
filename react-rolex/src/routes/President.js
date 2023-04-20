@@ -1,19 +1,17 @@
 import '../App.css';
 import React from 'react'
 import Calendar from '../components/Calendar';
-//import Dates from './components/Dates';
-import DataCard from '../components/DataCard';
+import PresidentDataCard from '../components/PresidentDataCard';
 import Navbar from '../components/Navbar';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <h1 className='header-text'>Class One</h1>
+      <h1 className='header-text'>President Data</h1>
         <div className="container">
           <Calendar className='calendar' />
-          {/* <DataCard className='deposits' /> */}
-          <DataCard className='deposits' />
+          <PresidentDataCard className='deposits' />
         </div>
       </div>
   );

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
-import Home from './routes/Home';
-import Message from './routes/Message';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Incubator from './routes/Incubator';
+import Headmaster from './routes/Headmaster';
+import President from './routes/President';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
@@ -19,9 +20,9 @@ export default App
 /*
 <>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/classtwo' element={<ClassTwo />} />
-        <Route path='/classthree' element={<ClassThree />} />
+        <Route path='/' element={<Incubator />} />
+        <Route path='/headmaster' element={<Headmaster />} />
+        <Route path='/president' element={<President />} />
       </Routes>
     </>
 */

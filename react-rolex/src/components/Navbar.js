@@ -22,17 +22,17 @@ window.addEventListener('scroll', changeColor);
   return (
     <div className={color ? 'header header-bg' : 'header'}>
         <Link to='/'>
-            <h1>Home Page?</h1>
+            <h1>                 </h1>
         </Link>
         <ul className={click ? 'nav-menu.active' : 'nav-menu'}>
             <li>
-                <Link to='/'>Class One</Link>
+                <Link to='/'>Incubator</Link>
             </li>
             <li>
-                <Link to='/classtwo'>Class Two</Link>
+                <Link to='/headmaster'>Headmaster</Link>
             </li>
             <li>
-                <Link to='/classthree'>Class Three</Link>
+                <Link to='/president'>President</Link>
             </li>
         </ul>
         <div className='hamburger' onClick={handleClick}>
