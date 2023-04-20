@@ -1,17 +1,17 @@
 import React from 'react';
 import './index.css';
-import Home from './routes/Home';
-import ClassTwo from './routes/ClassTwo';
-import ClassThree from './routes/ClassThree';
+import Incubator from './routes/Incubator';
+import Headmaster from './routes/Headmaster';
+import President from './routes/President';
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/classtwo' element={<ClassTwo />} />
-        <Route path='/classthree' element={<ClassThree />} />
+        <Route path='/' element={<Incubator />} />
+        <Route path='/headmaster' element={<Headmaster />} />
+        <Route path='/president' element={<President />} />
       </Routes>
     </>
   );
