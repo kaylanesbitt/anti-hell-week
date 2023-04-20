@@ -5,35 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c23e2bd0-6e7e-4fd5-842c-2793322a11eb" name="Changes" comment="created function to get the exam dates from the db">
-      <change afterPath="$PROJECT_DIR$/react-rolex/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/components/Calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/components/DataCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/components/DataCardStyles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/components/Dates.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/components/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/components/FooterStyles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/components/Navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/components/NavbarStyles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/routes/ClassThree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/routes/ClassTwo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/routes/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-rolex/src/setupTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-rolex/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-rolex/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-rolex/src/components/DataCardStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-rolex/src/components/DataCardStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-rolex/src/components/FooterStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-rolex/src/components/FooterStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-rolex/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-rolex/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,21 +34,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/aryanchoudhary/techx-projec/anti-hell-week&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "finalizing__css",
+    "last_opened_file_path": "/Users/aryanchoudhary/techx-projec/anti-hell-week",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

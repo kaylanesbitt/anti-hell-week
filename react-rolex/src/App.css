@@ -14,7 +14,7 @@
 }
 
 .css-j88s13-MuiPickersToolbar-root-MuiDatePickerToolbar-root {
-  display: none !important
+  display: grid !important
 }
 
 .css-j88s13-MuiPickersToolbar-root-MuiDatePickerToolbar-root {
@@ -23,9 +23,10 @@
 
 .css-3jvy96-MuiTypography-root-MuiDatePickerToolbar-title {
   justify-content: center !important;
-  background-color: orange;
-  padding: 1rem;
+  background-color: white;
+  padding: 2rem;
 }
+
 
 .css-1hbyad5-MuiTypography-root {
   display: none !important;
@@ -36,33 +37,41 @@
 }
 
 .css-7oawqu-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
-  background-color: orange !important;
+  background-color: #ADD8E6 !important;
 }
 
 .css-1qs309j-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
-  background-color: orange !important;
+  background-color: #ADD8E6 !important;
 }
 
 .header-text {
   text-transform: uppercase;
-  margin-bottom: 2rem;
-  color: orange;
+  margin-bottom: 1rem;
+  color: black;
+  font-family: "Courier New";
+  font-size: 3rem;
 }
-
+/* date for calander */
 .css-jhsfre-MuiGrid-root-MuiPickersToolbar-content {
   justify-content: center !important;
 }
 
 .css-1eurbeq-MuiPickersToolbar-root-MuiDatePickerToolbar-root {
-  background-color: orange;
+  background-color: white;
 }
 
+/*calander stuff */
 .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .Badge {
   color: black !important;
+}
+.MuiStaticDatePicker-root {
+  width: 40rem;
+  height: 20rem;
+  margin: 0 auto;
 }

@@ -26,18 +26,18 @@ code {
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *{
-  box-sizing: border-box;
+  box-sizing: content-box;
   margin: 0;
   padding: 0;
   font-family: 'Outfit', sans-serif;
 }
 
 body {
-  background: #fff;
+  background: #ADD8E6;
 }
 
 h1, h4, p, a {
-  color: #000;
+  color: black;
   text-decoration: none;
 }
 
@@ -66,3 +66,9 @@ ul {
   color: #fff;
   transition: 0.3s;
 }
+.MuiStaticDatePicker-root {
+  width: 15rem;
+  height: 15rem;
+  position: static !important;
+}
+
