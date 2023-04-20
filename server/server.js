@@ -5,9 +5,23 @@
  * @param {*} callback returns a list of all tuples in form {cid: cid, count: num_students enrolled in cid}. ordered by greatest num students.
  */
 function get_common_courses(cid, db, callback) {
-    sql = 'with zero_pids as (select e.pid as pid from enrolled e, courses c where e.cid = ' + cid
-        + ') select e.cid, c.department, c.number, c.name, count(e.pid) as count, c.exam1, c.exam2, c.exam3 from enrolled e, courses c where c.cid = e.cid and e.pid = pid and e.cid != ' + cid
+    sql = 'with pids as (select e.pid as pid from enrolled e where e.cid = ' + cid
+        + ') select e.cid, count(e.pid) as count, c.department, c.number, c.name, c.exam1, c.exam2, c.exam3 from enrolled e, courses c, pids where c.cid = e.cid and e.pid = pids.pid and e.cid != ' + cid
         + ' group by e.cid order by count(e.pid) desc'
+    results = []
+    db.all(sql, (error, rows) => {
+        rows.forEach((row) => {
+            results.push(row)
+        }
+        )
+        callback(results)
+    }
+    )
+}
+
+function get_all(db, callback) {
+    sql = 'select e.cid, c.department, c.number, c.name, count(e.pid) as count, c.exam1, c.exam2, c.exam3 from enrolled e, courses c where e.cid = c.cid group by e.cid order by count desc'
+
     results = []
     db.all(sql, (error, rows) => {
         rows.forEach((row) => {
@@ -30,6 +44,8 @@ let db = new sqlite3.Database('data.db', (err) => {
     }
     console.log('Connected to the in-memory SQlite database.');
 })
+
+
 
 const app = express();
 app.use(cors());
@@ -77,6 +93,12 @@ app.get('/headmaster', (req, res) => {
 
 app.get('/incubator', (req, res) => {
     get_common_courses(6, db, function (callback) {
+        res.json({ message: callback })
+    })
+});
+
+app.get('/president', (req, res) => {
+    get_all(db, function (callback) {
         res.json({ message: callback })
     })
 });

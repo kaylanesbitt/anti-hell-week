@@ -152,4 +152,4 @@ const prezData = [
     }
 ]
 
-export { incubatorData, headmasterData, prezData }
+export default { incubatorData, headmasterData, prezData }
