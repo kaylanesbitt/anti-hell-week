@@ -23,12 +23,15 @@ function render() {
     const data =[{"name":"test 1"},{"name":"test 2"}];
     const listItems = data.map((d) => <li key={d.name}>{d.name}</li>);
 
-    return (
+        return (
 
-    <div>
-        <h1>{listItems[0]}</h1>
-        <p> {listItems[1]}</p>
-    </div>
-    );
+            <div>
+                <h1>{listItems[0]}</h1>
+                <p> {listItems[1]}</p>
+            </div>
+        );
 }
+
+
+
 export default App;
