@@ -1,23 +1,43 @@
 const { parse } = require('date-fns')
 
-function getCourses(cid, tuples) {
+function headmasterCourses(tuples) {
     const axios = require('axios')
-    const url = 'http://localhost:8000/' + cid
+    const url = 'http://localhost:8000/headmaster'
     axios.get(url)
         .then(response => {
             tuples(response.data.message)
-        }).catch(err => console.log(err))
+        }).catch(err => console.log('error occured'))
+}
+
+headmasterCourses(tuples => console.log(tuples))
+
+function incubatorCourses(tuples) {
+    const axios = require('axios')
+    const url = 'http://localhost:8000/incubator'
+    axios.get(url)
+        .then(response => {
+            tuples(response.data.message)
+        }).catch(err => console.log('error occured'))
+}
+
+function prezCourses(tuples) {
+    const axios = require('axios')
+    const url = 'http://localhost:8000/president'
+    axios.get(url)
+        .then(response => {
+            tuples(response.data.message)
+        }).catch(err => console.log('error occured'))
 }
 
 function convertDate(date) {
-    if (date.length == 13) {
-        year = parseInt(date[2] + date[3] + date[4] + date[5] + date[6])
-        month = parseInt(date[7] + date[8])
-        day = parseInt(date[10] + date[11])
+    if (date.length === 13) {
+        const year = parseInt(date[2] + date[3] + date[4] + date[5] + date[6])
+        const month = parseInt(date[7] + date[8])
+        const day = parseInt(date[10] + date[11])
         return [year, month, day]
     }
     else {
-        return 0
+        return 'null'
     }
 }
 
@@ -25,11 +45,17 @@ function classHeader(dept, num, name) {
     return `${dept} ${num}: ${name}`
 }
 
-function getDates() {
-    getCourses(0, function (tuples) {
+function numStudents(num) {
+    return `Number of enrolled students: ${num}`
+}
+/*
+
+function getHeadmasterDates() {
+    headmasterCourses(function (tuples) {
         dates_arr = []
         tuples.forEach((elt) => {
             console.log(classHeader(elt.department, elt.number, elt.name))
+            console.log(numStudents(elt.count))
             if (convertDate(elt.exam1) != 0) {
                 dates_arr.push(convertDate(elt.exam1))
             }
@@ -45,6 +71,8 @@ function getDates() {
 
 }
 
-getDates()
 
 //parseInt(str)
+
+export { headmasterCourses, incubatorCourses, prezCourses }
+*/
