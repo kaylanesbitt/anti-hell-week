@@ -45,16 +45,18 @@ function convertDate(date) {
         'November',
         'December'
     ]
-    if (date.length === 13) {
-        const year = parseInt(date[2] + date[3] + date[4] + date[5] + date[6])
-        const month = parseInt(date[7] + date[8])
-        const day = parseInt(date[10] + date[11])
+    if (date.length == 10) {
+        const year = parseInt(date[0] + date[1] + date[2] + date[2])
+        const month = parseInt(date[5] + date[6])
+        const day = parseInt(date[8] + date[9])
         return `${months[month]} ${day}, ${year}`
     }
     else {
         return 0
     }
 }
+
+console.log(convertDate('2023-04-25'))
 
 function classHeader(dept, num, name) {
     return `${dept} ${num}: ${name}`

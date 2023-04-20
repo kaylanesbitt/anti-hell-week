@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import headmasterCourses from './connection.js'
-import zeroData from './zeroData.js'
+import zeroData from './data.js'
 
 
 function ClassZero() {
