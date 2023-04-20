@@ -18,7 +18,7 @@ function incubatorCourses(tuples) {
             tuples(response.data.message)
         }).catch(err => console.log('error occured'))
 }
-incubatorCourses(tuples => console.log(tuples))
+headmasterCourses(tuples => console.log(tuples))
 
 function prezCourses(tuples) {
     const axios = require('axios')

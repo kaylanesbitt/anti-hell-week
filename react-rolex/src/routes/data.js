@@ -34,6 +34,7 @@ const incubatorData = [
     {
         cid: 2,
         name: 'MATH 381 Discrete Math',
+        count: 6,
         exam1: '2023-03-08',
         exam2: null,
         exam3: null
@@ -41,9 +42,16 @@ const incubatorData = [
     {
         cid: 4,
         name: 'RELI 125 Heaven and Hell',
+        count: 1,
         exam1: '2023-03-07',
         exam2: null,
         exam3: null
     }
 
 ]
+
+const headmasterData = [
+
+]
+
+export { incubatorData }
