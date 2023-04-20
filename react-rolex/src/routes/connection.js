@@ -18,7 +18,7 @@ function incubatorCourses(tuples) {
             tuples(response.data.message)
         }).catch(err => console.log('error occured'))
 }
-headmasterCourses(tuples => console.log(tuples))
+
 
 function prezCourses(tuples) {
     const axios = require('axios')
@@ -28,6 +28,8 @@ function prezCourses(tuples) {
             tuples(response.data.message)
         }).catch(err => console.log('error occured'))
 }
+
+prezCourses(tuples => console.log(tuples))
 function convertDate(date) {
     const months = [
         'January',
