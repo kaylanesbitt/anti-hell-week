@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c23e2bd0-6e7e-4fd5-842c-2793322a11eb" name="Changes" comment="created a render function and printed function onto main mage">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-rolex/src/routes/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-rolex/src/routes/Home.js" afterDir="false" />
-    </list>
+    <list default="true" id="c23e2bd0-6e7e-4fd5-842c-2793322a11eb" name="Changes" comment="created a render function and printed function onto main mage" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
